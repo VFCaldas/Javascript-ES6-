@@ -7,7 +7,6 @@ const larguraImagens = document.querySelectorAll('img');
 let soma = 0
 larguraImagens.forEach(imagem => {
   soma += imagem.offsetWidth;
-
 });
 console.log(soma);
 // Verifique se os links da página possuem
