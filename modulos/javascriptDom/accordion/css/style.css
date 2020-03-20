@@ -226,3 +226,28 @@ body {
     transform: translate3d(0px, 0, 0);
   }
 }
+
+.accordion dd{
+  display: none;
+}
+.accordion dt::after{
+  content: '⤵';
+}
+.accordion dt.ativo::after{
+  content: '⤴'
+}
+.accordion dd.ativo{
+  display: block;
+  animation: slidedown .5s forwards;
+}
+
+@keyframes slideDown{
+  from{
+    opacity: 0;
+    height: 0;
+  }
+  to {
+    height: auto;
+    opacity: 1;
+  }
+}

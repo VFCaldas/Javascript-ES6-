@@ -26,15 +26,17 @@ if (tabContent.length && tabMenu.length) {
 }
 }
  function initAccordion(){
-
-
-
-
+   const accordionList = document.querySelectorAll('.accordion dt')
+   accordionList[0].classList.add('ativo');
+  function activeAccordion(){
+    this.classList.add('ativo'); //Equals to event.currentTarget
+    this.nextElementSibling.classList.add('ativo'); //Equals to event.currentTarget
+  }
+   accordionList.forEach((item)=>{
+     item.addEventListener('click', activeAccordion);
+   })
 }
-
-
-
-
+initAccordion();
 
 
 
